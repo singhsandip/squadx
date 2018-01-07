@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/transaction_row_ll"
+    android:weightSum="100"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/transaction_row_coin_tv"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:text="BTC"
+        android:gravity="start"
+        android:layout_weight="15"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/transaction_row_type_tv"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:text="Buy"
+        android:gravity="start"
+        android:layout_weight="15"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/transaction_row_total_value_tv"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="$6333555767"
+        android:layout_weight="30"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/transaction_row_date_tv"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:text="06/01/18"
+        android:gravity="center"
+        android:layout_weight="40"/>
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d4cece"/>
+</LinearLayout>

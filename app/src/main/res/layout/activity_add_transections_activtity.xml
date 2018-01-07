@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.klumpster.squadx.activities.AddTransectionActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:background="@color/light_black"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="15dp"
+            android:id="@+id/add_transaction_cancel_img_v"
+            android:src="@drawable/cancel"
+            android:layout_weight="10"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Add Transaction"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="70"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_transaction_save_tv"
+            android:textColor="@color/white"
+            android:text="SAVE"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_weight="20"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trading Pair"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BTC/USD"
+                    android:id="@+id/add_transaction_trading_pair_tv"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Select Exchange"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="15dp"
+                    android:layout_weight="60"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_transaction_select_exchange_ll"
+                    android:orientation="horizontal"
+                    android:layout_weight="40">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="BTC/USD"
+                        android:layout_weight="30"
+                        android:id="@+id/add_transaction_select_exchange_tv"
+                        android:layout_alignParentRight="true"
+                        android:textSize="15dp"
+                        android:gravity="end"
+                        android:textColor="#4874c1"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:id="@+id/add_transaction_select_exchange_img_v"
+                        android:layout_weight="10"
+                        android:layout_gravity="center"
+                        android:src="@drawable/select"
+                        android:layout_toRightOf="@id/add_transaction_select_exchange_tv"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_transaction_rdgrp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_transaction_buy_rdb"
+                    android:text="BUY"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_transaction_sell_rdb"
+                    android:text="SELL"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_transaction_watch_only_rdb"
+                    android:text="WATCH ONLY"
+                    android:layout_weight="1"/>
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Price"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_transaction_current_price_tv"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trade Price"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Enter trade price"
+                    android:id="@+id/add_transaction_trade_price_et"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Quantity"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Quantity"
+                    android:id="@+id/add_transaction_quantity_et"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:inputType="number"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Value"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/add_transaction_total_value_tv"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trade Date"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="15dp"
+                    android:layout_weight="30"
+                    android:textColor="@color/black"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="70"
+                    android:id="@+id/add_transaction_trade_date_ll"
+                    android:weightSum="70"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="BTC/USD"
+                        android:layout_weight="60"
+                        android:id="@+id/add_transaction_trade_date_tv"
+                        android:textSize="15dp"
+                        android:gravity="end"
+                        android:textColor="#4874c1"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_weight="10"
+                        android:id="@+id/add_transaction_trade_date_img_v"
+                        android:layout_gravity="center"
+                        android:src="@drawable/select"
+                        android:layout_toRightOf="@id/add_transaction_select_exchange_tv"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Notes"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Add notes"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/add_transaction_add_notes_et"
+                    android:layout_alignParentRight="true"
+                    android:textSize="15dp"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+    <include
+        layout="@layout/progress_bar_layout"/>
+</RelativeLayout>
